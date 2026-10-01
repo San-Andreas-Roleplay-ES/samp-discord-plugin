@@ -1,15 +1,16 @@
 #pragma once
 
-#include "discord-rpc\discord_rpc.h"
 #include <ctime>
 #include <string>
 
 namespace Discord
 {
 	void initialize();
-	void update(const time_t time, const char* state, const char* details, const char* image, const char* imageDetails, const char* infoDetails);
-	inline void update(const time_t time, const std::string& state, const std::string& details, const std::string& image, const std::string& imageDetails, const std::string& infoDetails)
+
+	// partyMax <= 0 omits the party size bar from the profile entirely.
+	void update(const time_t time, const char* details, const char* state, const char* largeImageText, int partySize, int partyMax);
+	inline void update(const time_t time, const std::string& details, const std::string& state, const std::string& largeImageText, int partySize, int partyMax)
 	{
-		return update(time, state.c_str(), details.c_str(), image.c_str(), imageDetails.c_str(), infoDetails.c_str());
+		return update(time, details.c_str(), state.c_str(), largeImageText.c_str(), partySize, partyMax);
 	}
 }
