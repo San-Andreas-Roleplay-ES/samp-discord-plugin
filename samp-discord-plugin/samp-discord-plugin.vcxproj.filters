@@ -23,9 +23,6 @@
     <ClCompile Include="query.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="http.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="discord.h">
@@ -35,12 +32,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="query.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="http.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="discord-rpc\discord_rpc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

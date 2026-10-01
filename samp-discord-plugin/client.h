@@ -1,7 +1,6 @@
 #pragma once
 
 #include <string>
-#include <sstream>
 
 namespace SAMP
 {
@@ -16,9 +15,11 @@ namespace SAMP
 		std::string address;
 		std::string port;
 		std::string username;
-
-		std::string logoFromStream(std::stringstream& stream, std::string default);
 	};
 
+	constexpr const char* ALLOWED_SERVER_HOST = "play.sarp.es";
+	constexpr const char* ALLOWED_SERVER_PORT = "7777";
+
 	bool readServerData(const char* cmdline, ServerData& data);
+	bool isAllowedServer(const std::string& address, const std::string& port);
 }
